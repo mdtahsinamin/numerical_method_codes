@@ -1,3 +1,5 @@
+from numpy import linalg
+
 
 def determine(mat):
     result = mat[0][0] * (mat[1][1] * mat[2][2] - mat[2][1]* mat[1][2]) - mat[0][1]*(mat[1][0] * mat[2][2] - mat[2][0] * mat[1][2]) + mat[0][2] * (mat[1][0] * mat[2][1] - mat[1][1]*mat[2][0])
@@ -54,9 +56,10 @@ def main():
             arr.append(n)
         coff.append(arr)
     print(coff)
+    #print(determine(coff))
+    #print(linalg.det(coff))
     print(crammer_matrix(coff))
 
-   
 
 if __name__=="__main__":
     main()

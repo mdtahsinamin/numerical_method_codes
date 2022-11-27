@@ -4,15 +4,15 @@ from numpy import array, fabs, linalg, zeros
 def gauss_jordan():
 
     coff = array([
-    [0,-1,3],
-    [1,0,1],
+    [2,-1,3],
+    [1,1,1],
     [1,-1,1]
     ], float)
 
     b = array([9,6,2], float)
 
     n = len(b)
-    print(linalg.solve(coff, b))
+    #print(linalg.solve(coff, b))
 
     for k in range(n):
          
